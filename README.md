@@ -8,6 +8,24 @@
 
 _This web application takes a number entered by the user, and loops through those numbers from 0 to the entered number, and returns a response based on a set of unique rules._
 
+## Specifications:
+
+##### _Basic Looping Functionality_
+
+- **Spec:** The program returns a range of numbers from 0 to the users inputted number.
+
+  - **_Input:_** "4"
+  - **_Output:_** "0, 1, 2, 3, 4
+
+- **Spec:** The program returns a range of numbers from 0 to the users inputted number.
+
+  - **_Input:_** "4"
+  - **_Output:_** "0, 1, 2, 3, 4
+
+- **Spec:** The program returns a range of numbers from 0 to the users inputted number.
+  - **_Input:_** "4"
+  - **_Output:_** "0, 1, 2, 3, 4
+
 ## Setup/Installation Requirements
 
 - Setup
