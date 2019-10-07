@@ -24,21 +24,37 @@
   <!-- Start of Code -->
 
   <!-- INPUT FORM -->
+  <img src="img/source.gif" alt="Picture of Bender from Futurama dancing" class="shadow mt-4 rounded-lg">
+
   <div class="container p-4">
-    <div class="card mx-auto beepCard bg-primary text-white">
-      <div class="card-header text-center h1">Beep Boop Web App</div>
+    <div class="card shadow mx-auto beepCard bg-primary">
+      <div class="card-header text-center text-white">
+        <h1>Beep Boop Web App</h1>
+      </div>
       <div class="card-body bg-light text-black">
         <div class="card-text">
+          <form id="numberInput">
+            <div class="form-group">
+              <label for="userNumInput" class="h4">Enter a Positive Integer:</label>
+              <input type="number" id="userNumInput" class="form-control bg-light border border-primary" required>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+              <!-- <button type="reset" class="btn btn-lg btn-outline-dark btn-block">Reset</button> -->
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Results -->
-  <div class="container p-4">
-    <div class="card mx-auto beepCard bg-success text-white">
-      <div class="card-header">Results:</div>
-      <ul class="list-group list-group-flush">
+  <div class="container p-4" id="results">
+    <div class="card shadow mx-auto beepCard">
+      <div class="card-header bg-success text-center text-white">
+        <h2>Results</h2>
+      </div>
+      <ul class="list-group list-group-flush" id="resultsList">
         <li class="list-group-item">Test 1</li>
         <li class="list-group-item">Test 1</li>
         <li class="list-group-item">Test 1</li>
