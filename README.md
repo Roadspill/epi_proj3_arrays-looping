@@ -10,21 +10,38 @@ _This web application takes a number entered by the user, and loops through thos
 
 ## Specifications:
 
-##### _Basic Looping Functionality_
-
-- **Spec:** The program returns a range of numbers from 0 to the users inputted number.
-
-  - **_Input:_** "4"
-  - **_Output:_** "0, 1, 2, 3, 4
-
-- **Spec:** The program returns a range of numbers from 0 to the users inputted number.
-
-  - **_Input:_** "4"
-  - **_Output:_** "0, 1, 2, 3, 4
+##### Basic Specs
 
 - **Spec:** The program returns a range of numbers from 0 to the users inputted number.
   - **_Input:_** "4"
-  - **_Output:_** "0, 1, 2, 3, 4
+  - **_Output:_** 0, 1, 2, 3, 4
+- **Spec:** All digits are replaced with "Beep!" when any digit contains 1.
+  - **_Input:_** `"4"`
+  - **_Output:_** `0, "Beep!", 2, 3, 4`
+- **Spec:** All digits are replaced with "Boop!" when any digit contains 2.
+  - **_Input:_** `"4"`
+  - **_Output:_** `0, "Beep!", "Boop!", 3, 4`
+- **Spec:** All digits are replaced with "I'm sorry, Dave. I'm afraid I can't do that." when any digit contains 3.
+  - **_Input:_** `"4"`
+  - **_Output:_** `0, "Beep!", "Boop!", "I'm sorry, Dave. I'm afraid I can't do that.", 4`
+- **Spec:** When a negative number is entered, the program alerts to re-enter a positive integer.
+  - **_Input:_** `"-4"`
+  - **_Output:_** `"Please enter a positive number and try again."`
+- **Spec:** If input is empty when submitted, alerts user to enter an integer.
+  - **_Input:_** `" "`
+  - **_Output:_** `Please fill out this field`
+
+#### Expectations
+
+- **Spec:** When the number is 13, the text should be replaced with "I'm sorry, Dave. I'm afraid I can't do that."
+  - **_Input:_** `"13"`
+  - **_Output:_** `..., "I'm sorry, Dave. I'm afraid I can't do that.", ...`
+- **Spec:** When the number is 21, the text should be replaced with "Boop!"
+  - **_Input:_** `"21"`
+  - **_Output:_** `..., "Boop!", ...`
+- **Spec:** When the number is 32, the text should be replaced with "I'm sorry, Dave. I'm afraid I can't do that."
+  - **_Input:_** `"32"`
+  - **_Output:_** `..., "I'm sorry, Dave. I'm afraid I can't do that.", ...`
 
 ## Setup/Installation Requirements
 
