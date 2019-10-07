@@ -1,32 +1,48 @@
-// Business Logic
+// GLOBAL VARIABLES
 var numArray = [];
-var resultArray = [];
+
+// FUNCTION TO BUILD ORIGINAL ARRAY
+var buildArray = function (number) {
+  for (i = 0; i < number; i++) {
+    numArray.push(i + 1);
+  }
+};
 
 // FUNCTION TO REPLACE INTEGER WITH STRING
-var replace = function (number) {
+var rules = function (number) {
 
-
+  if (number === "") {
+    console.log("Input field cannot be blank, please enter a Positive Integer ie: 13");
+  } else if (number < 0) {
+    console.log("Input cannot be a Negative Integer, please enter a Positive Integer ie: 23");
+  } else if (number.toString().includes("3")) {
+    return "I'm sorry, Dave. I'm afraid I can't do that."
+  } else if (number.toString().includes("2")) {
+    return "Boop!";
+  } else if (number.toString().includes("1")) {
+    return "Beep!";
+  } else {
+    return number;
+  }
 };
 
 
-
 // USER LOGIC
-
 $(document).ready(function () {
   $("form#numberInput").submit(function (event) {
-    event.PreventDefault();
+    event.preventDefault();
 
     // VARIABLES
+    var userNumInput = parseInt($("#userNumInput").val());
     var resultsID = document.getElementById("results");
-    var userNumInput = $("#userNumInput").val();
 
+    // BUILD ORIGINAL ARRAY
+    buildArray(userNumInput);
+    console.log(numArray) // Array Error Checking
 
-
-    // OUTPUT RESULTS
-
-
-    // SCROLL TO RESULTS
-    resultsID.scrollIntoView(true);
+    // MAP ARRAY TO NEW ARRAY
+    var newArray = numArray.map(rules);
+    console.log(newArray);
 
 
     // $('html, body').animate({
