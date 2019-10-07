@@ -3,8 +3,8 @@ var numArray = [];
 
 // FUNCTION TO BUILD ORIGINAL ARRAY
 var buildArray = function (number) {
-  for (i = 0; i < number; i++) {
-    numArray.push(i + 1);
+  for (i = 0; i <= number; i++) {
+    numArray.push(i);
   }
 };
 
@@ -32,21 +32,27 @@ $(document).ready(function () {
   $("form#numberInput").submit(function (event) {
     event.preventDefault();
 
+    $('ul').empty();
+
     // VARIABLES
     var userNumInput = parseInt($("#userNumInput").val());
-    var resultsID = document.getElementById("results");
+
 
     // BUILD ORIGINAL ARRAY
     buildArray(userNumInput);
-    console.log(numArray) // Array Error Checking
 
     // MAP ARRAY TO NEW ARRAY
     var newArray = numArray.map(rules);
-    console.log(newArray);
 
+    // RESULTS
+    for (i = 0; i < numArray.length || i < newArray.length; i++) {
+      $("#resultsList").append('<li class="list-group-item"><strong>' + numArray[i] + ':</strong>&emsp;&emsp;' + newArray[i] + '</li>');
+    };
 
-    // $('html, body').animate({
-    //   scrollTop: ($('#results').offset().top)
-    // }, 500);
+    $("#results").slideDown(200);
+
+    $('html, body').animate({
+      scrollTop: ($('#results').offset().top)
+    }, 500);
   });
 });

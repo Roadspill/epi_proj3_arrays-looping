@@ -1,3 +1,7 @@
+#results {
+  display: none;
+}
+
 .beepCard {
   width: 95%vw;
   max-width: 800px;
